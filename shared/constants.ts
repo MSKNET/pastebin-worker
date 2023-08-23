@@ -1,6 +1,6 @@
 export const CHAR_GEN = "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678"
 export const NAME_REGEX = /^[a-zA-Z0-9+_\-[\]*$@,;]{3,}$/
-export const PASTE_NAME_LEN = 4
+export const PASTE_NAME_LEN = 3
 export const PRIVATE_PASTE_NAME_LEN = 24
 export const DEFAULT_PASSWD_LEN = 24
 export const MAX_PASSWD_LEN = 128

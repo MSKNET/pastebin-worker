@@ -75,7 +75,7 @@ export function PanelSettingsPanel({ setting, onSettingChange, config, ...rest }
           value={setting.uploadKind}
           onValueChange={(v) => onSettingChange({ ...setting, uploadKind: v as UploadKind })}
         >
-          <Radio value="short" description={`Example: ${config.DEPLOY_URL}/BxWH`} classNames={radioClassNames}>
+          <Radio value="short" description={`Example: ${config.DEPLOY_URL}/BxW`} classNames={radioClassNames}>
             Generate a short random URL
           </Radio>
           <Radio
