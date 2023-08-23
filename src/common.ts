@@ -1,7 +1,7 @@
 export const params = {
   CHAR_GEN: "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678",
   NAME_REGEX: /^[a-zA-Z0-9+_\-[\]*$@,;]{3,}$/,
-  PASTE_NAME_LEN: 4,
+  PASTE_NAME_LEN: 3,
   PRIVATE_PASTE_NAME_LEN: 24,
   DEFAULT_PASSWD_LEN: 24,
   SEP: ":",
