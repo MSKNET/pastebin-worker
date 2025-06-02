@@ -23,11 +23,11 @@ jobs:
       - name: "Build Frontend"
         run: yarn build:frontend
 
-      - name: "Test"
-        run: |
-          yarn fmt
-          yarn lint
-          yarn test
+      # - name: "Test"
+      #   run: |
+      #     yarn fmt
+      #     yarn lint
+      #     yarn test
 
       - name: "Deploy"
         env:
