@@ -59,7 +59,7 @@ const tabSettings: TabSetting[] = [
 ]
 
 function handleNewLines(str: string): string {
-  if (str.at(-1) === "\n") {
+  if (str.charAt(-1) === "\n") {
     str += " "
   }
   return str
