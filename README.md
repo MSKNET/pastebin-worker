@@ -29,7 +29,7 @@ This is a pastebin that can be deployed on Cloudflare workers. Try it on [shz.al
 
 You are free to deploy the pastebin on your own domain if you host your domain on Cloudflare.
 
-1. Install `node` and `yarn`.
+1. Install `node` and `pnpm`.
 
 2. Create a KV namespace and R2 bucket on Cloudflare workers dashboard, remember its ID.
 
@@ -40,10 +40,10 @@ You are free to deploy the pastebin on your own domain if you host your domain o
 5. Login to Cloudflare and deploy with the following steps:
 
 ```console
-$ yarn install
-$ yarn wrangler login
-$ yarn build:frontend
-$ yarn deploy
+$ pnpm install
+$ pnpm wrangler login
+$ pnpm build:frontend
+$ pnpm deploy
 ```
 
 6. Enjoy!
@@ -85,13 +85,13 @@ $ curl -u admin1:this-is-passwd-1 -Fc=@/path/to/file example-pb.com
 Delete a paste:
 
 ```console
-$ yarn delete-paste <name-of-paste>
+$ pnpm delete-paste <name-of-paste>
 ```
 
 List pastes:
 
 ```console
-$ yarn -s wrangler kv key list --binding PB > kv_list.json
+$ pnpm -s wrangler kv key list --binding PB > kv_list.json
 ```
 
 ## Development
@@ -99,19 +99,19 @@ $ yarn -s wrangler kv key list --binding PB > kv_list.json
 Note that the frontend and worker code are built separatedly. To start a Vite development server of the frontend,
 
 ```console
-$ yarn dev:frontend
+$ pnpm dev:frontend
 ```
 
 To develop the backend worker, we must build a develop version of frontend,
 
 ```console
-$ yarn build:frontend:dev
+$ pnpm build:frontend:dev
 ```
 
 Then starts a local worker,
 
 ```console
-$ yarn dev
+$ pnpm dev
 ```
 
 The difference between `build:frontend:dev` and `build:frontend` is that the former will points the API endpoint to your deployment URL, while the later points to `http://localhost:8787`, the address of a local worker.
@@ -119,18 +119,18 @@ The difference between `build:frontend:dev` and `build:frontend` is that the for
 Run tests:
 
 ```console
-$ yarn test
+$ pnpm test
 ```
 
 Run tests with coverage report:
 
 ```console
-$ yarn coverage
+$ pnpm coverage
 ```
 
 Remember to run eslint checks and prettier before commiting your code.
 
 ```console
-$ yarn fmt
-$ yarn lint
+$ pnpm fmt
+$ pnpm lint
 ```
