@@ -258,9 +258,6 @@ export async function handleGet(request: Request, env: Env, ctx: ExecutionContex
   // handle display page with SSR
   if (role === "d") {
     try {
-      // HACK: Dynamic import to avoid loading @heroui/react at test initialization
-      // @heroui/input-otp's chunked build causes module resolution issues in Workers test environment
-      // See: UPSTREAM_ISSUE.md for details
       const { renderDisplayPage } = await import("../pages/display.js")
       const displayName = url.pathname.slice(3) // Remove "/d/" prefix
       const page = await renderDisplayPage(env, displayName, item.paste, item.metadata)
