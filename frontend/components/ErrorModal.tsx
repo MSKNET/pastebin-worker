@@ -1,6 +1,6 @@
 import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "./ui/index.js"
 import type { ModalProps } from "./ui/index.js"
-import React, { useState } from "react"
+import { useState } from "react"
 import { ErrorWithTitle } from "../utils/errors.js"
 
 export interface ErrorState {
@@ -45,7 +45,7 @@ export function useErrorModal() {
             <p>{errorState.content}</p>
           </ModalBody>
           <ModalFooter>
-            <Button color="danger" variant="light" onPress={onClose}>
+            <Button variant="solid" onPress={onClose}>
               Close
             </Button>
           </ModalFooter>

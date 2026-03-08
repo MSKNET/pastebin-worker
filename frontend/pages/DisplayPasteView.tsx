@@ -124,7 +124,7 @@ export function DisplayPasteView(props: DisplayPasteViewProps) {
                 <div className={showFileContent ? "" : "h-[10em]"}>
                   {showFileContent ? (
                     <>
-                      <div className="text-foreground-600 mb-2 text-small flex flex-row gap-2">
+                      <div className="text-gray-500 mb-2 text-sm flex flex-row gap-2">
                         <span>{pasteFile?.name}</span>
                         <span>{`(${formatSize(pasteFile.size)})`}</span>
                         {forceShowBinary && (

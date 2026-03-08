@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import chardet from "chardet"
 import { useErrorModal } from "../components/ErrorModal.js"
 import { DisplayPasteView } from "./DisplayPasteView.js"

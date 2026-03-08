@@ -30,7 +30,7 @@ export function Modal({ isOpen, onClose, children, ...rest }: ModalProps) {
 export function ModalContent({ children, className = "", ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={`bg-gray-900 border border-gray-800 rounded-xl shadow-xl max-w-md w-full mx-4 ${className}`}
+      className={`bg-content1 border border-divider rounded-xl shadow-xl max-w-md w-full mx-4 ${className}`}
       onClick={(e) => e.stopPropagation()}
       {...rest}
     >
@@ -41,7 +41,7 @@ export function ModalContent({ children, className = "", ...rest }: React.HTMLAt
 
 export function ModalHeader({ children, className = "", ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={`px-6 py-4 border-b border-gray-800 ${className}`} {...rest}>
+    <div className={`px-4 pt-4 pb-2 text-lg font-semibold ${className}`} {...rest}>
       {children}
     </div>
   )
@@ -49,7 +49,7 @@ export function ModalHeader({ children, className = "", ...rest }: React.HTMLAtt
 
 export function ModalBody({ children, className = "", ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={`px-6 py-4 ${className}`} {...rest}>
+    <div className={`px-4 py-2 text-sm text-default-500 ${className}`} {...rest}>
       {children}
     </div>
   )
@@ -57,7 +57,7 @@ export function ModalBody({ children, className = "", ...rest }: React.HTMLAttri
 
 export function ModalFooter({ children, className = "", ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={`px-6 py-4 border-t border-gray-800 flex justify-end gap-2 ${className}`} {...rest}>
+    <div className={`px-4 pb-4 pt-4 flex justify-end gap-2 ${className}`} {...rest}>
       {children}
     </div>
   )
