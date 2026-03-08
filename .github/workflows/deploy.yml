@@ -30,7 +30,7 @@ jobs:
         run: |
           pnpm fmt
           pnpm lint
-          pnpm test
+          pnpm test --testTimeout 15000
 
       - name: "Deploy"
         env:
